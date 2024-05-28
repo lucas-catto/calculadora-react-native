@@ -1,35 +1,47 @@
-import { Text, SafeAreaView, StyleSheet } from 'react-native';
 
-// You can import supported modules from npm
-import { Card } from 'react-native-paper';
+import {
+    View,
+    Text,
+    SafeAreaView,
+    StyleSheet
+} from 'react-native';
 
-// or any files within the Snack
-import AssetExample from './components/AssetExample';
+import Botao from "./src/components/Botao";
+import Visor from "./src/components/Visor";
 
 export default function App() {
-  return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.paragraph}>
-        Change code in the editor and watch it change on your phone! Save to get a shareable url.
-      </Text>
-      <Card>
-        <AssetExample />
-      </Card>
-    </SafeAreaView>
-  );
+    return (
+        <SafeAreaView style={ estilos.container }>
+            <View style={ estilos.botao }>
+                <Botao label="7"/>
+                <Botao label="8"/>
+                <Botao label="9"/>
+                <Botao label="*"/>
+
+                <Botao label="4"/>
+                <Botao label="5"/>
+                <Botao label="6"/>
+                <Botao label="-"/>
+                
+                <Botao label="1"/>
+                <Botao label="2"/>
+                <Botao label="3"/>
+                <Botao label="+"/>
+            </View>
+        </SafeAreaView>
+    );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: '#ecf0f1',
-    padding: 8,
-  },
-  paragraph: {
-    margin: 24,
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
+const estilos = StyleSheet.create({
+    container: {
+        flex:            1,
+        justifyContent:  'center',
+        backgroundColor: '#ecf0f1',
+        // padding:         8,
+    },
+    botao:{
+        flexDirection:   'row',
+        flexWrap:        'wrap',
+        backgroundColor: '#900',
+    }
 });
