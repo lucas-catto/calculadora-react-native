@@ -10,16 +10,29 @@ import Botao from "./src/components/Botao";
 import Visor from "./src/components/Visor";
 
 export default function App() {
+
+    adicionarDigito = n => {
+        console.warn(`Number: ${n}`)
+    }
+    
+    limparMemoria = () => {
+        console.warn("limpando a memória")
+    }
+    
+    setOperacao = () => {
+        console.warn("definindo a operação")
+    }
+
     return (
         <SafeAreaView style={ estilos.container }>
             
             <Visor></Visor>
 
             <View style={ estilos.botao }>
-                <Botao label="AC" triplo/>
-                <Botao label="/" red/>
+                <Botao label="AC" triplo onClick={limparMemoria}/>
+                <Botao label="/" red onClick={setOperacao}/>
 
-                <Botao label="7"/>
+                <Botao label="7" onClick={adicionarDigito}/>
                 <Botao label="8"/>
                 <Botao label="9"/>
                 <Botao label="*" red/>
