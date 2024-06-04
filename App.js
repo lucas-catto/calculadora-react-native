@@ -43,7 +43,9 @@ export default function App() {
 const estilos = StyleSheet.create({
     container: {
         flex:            1,
-        justifyContent:  'center',
+        justifyContent:  'flex-end',
+        // alignItems: 'flex-end',
+
         backgroundColor: '#ecf0f1',
         // padding:         8,
     },
