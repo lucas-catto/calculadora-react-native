@@ -12,6 +12,9 @@ import Visor from "./src/components/Visor";
 export default function App() {
     return (
         <SafeAreaView style={ estilos.container }>
+            
+            <Visor></Visor>
+
             <View style={ estilos.botao }>
                 <Botao label="AC" triplo/>
                 <Botao label="/" red/>
