@@ -17,7 +17,7 @@ export default props => {
     if (props.red) estilosBotao.push(estilos.red)
 
     return (
-        <TouchableHighlight>
+        <TouchableHighlight onPress={() => props.onClick(props.label)}>
             <Text style={ estilosBotao }>{ props.label }</Text>
         </TouchableHighlight>
     );

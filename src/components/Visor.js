@@ -8,7 +8,7 @@ import {
 export default props => {
     return (
         <View style={ estilos.visor }>
-            <Text style={estilos.valorVisor}>...</Text>
+            <Text style={ estilos.valorVisor } numberOfLines={1}>{ props.valor }</Text>
         </View>
     );
 }
